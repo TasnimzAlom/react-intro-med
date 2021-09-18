@@ -1,9 +1,18 @@
 import React from 'react'
+// import { FaTrashAlt } from 'react-icons/fa';
+import ContactCard from './ContactCard';
 
-const ContactList = () => {
+
+const ContactList = (props) => {
+    const renderContactList = props.contacts.map((contact)=> {
+        return(
+         <ContactCard contact={contact}></ContactCard>
+        )
+    })
+
     return (
         <div className="ui celled list">
-            Contact List
+           {renderContactList}
             
         </div>
     )
