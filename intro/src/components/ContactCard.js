@@ -11,7 +11,9 @@ const ContactCard = (props) => {
             <div className="header">{name}</div>
             <div>{email}</div>
                 <FaTrashAlt
-                style={{color:"red", marginTop:"7px"}}/>
+                style={{color:"red", marginTop:"7px"}}
+                onClick={()=> props.clickHandler(id)}
+                />
         </div>
     </div>
     )
